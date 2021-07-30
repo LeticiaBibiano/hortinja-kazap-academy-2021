@@ -1,0 +1,19 @@
+{
+  "name": "hortinja-api",
+  "version": "1.0.0",
+  "description": "API do projeto Hortinja.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeticiaBibiano/hortinja-kazap-academy-2021.git"
+  },
+  "author": "Letícia Bibiano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeticiaBibiano/hortinja-kazap-academy-2021/issues"
+  },
+  "homepage": "https://github.com/LeticiaBibiano/hortinja-kazap-academy-2021#readme"
+}
