@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import BgCard from '../../assets/bgCard.svg'
-import Alface from '../../assets/alface.jpg'
+import Beringela from '../../assets/beringela.jpg'
 
-export const Card1 = styled.div` 
+export const Card2 = styled.div` 
     height: 320px;
     width: 300px;
     background: #FBFAFA;
@@ -26,12 +26,13 @@ export const CardImage = styled.div`
     
 `
 
-export const ItemImage = styled.div`
+export const ItemImage2 = styled.div`
     height: 80px;
     width: 80px;
-    background-image: url(${Alface});
+    background-image: url(${Beringela});
     background-size: cover;
     border-radius: 100px;
     margin-left: 20px;
     border: 2px solid white;
+    background-position: center;
 `

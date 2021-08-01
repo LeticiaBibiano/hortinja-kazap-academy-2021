@@ -6,11 +6,15 @@ import { Flex,
          Box,
          Divider,
          Stack,
-         Button 
+         Button,
+         IconButton 
         } from "@chakra-ui/react"
 import Logo from '../../assets/logo.svg'
-import { ChevronDownIcon } from '@chakra-ui/icons'
-import { Card1 } from '../../components'
+import { ChevronDownIcon, DeleteIcon, EditIcon } from '@chakra-ui/icons'
+import { Card1, CardImage, ItemImage } from '../../components/Card1'
+import { Card2, ItemImage2 } from '../../components/Card2'
+import { Card3, ItemImage3 } from '../../components/Card3'
+import { Separator } from '../../components/Separator'
 
 export const Home = () => {
     return(
@@ -90,9 +94,388 @@ export const Home = () => {
             </Box>
             </Flex>
 
-            <Box>
-                <Card1/>
-            </Box>
+            {/* Buttons */}
+            <Flex>
+                <Button>Adicionar Hortaliças</Button>
+                <Button>Adicionar Categoria</Button>
+            </Flex>
+
+            <Button>Verduras</Button>
+
+            {/* Card verduras */}
+            <Flex>
+                <Card1>
+                    <CardImage>
+                        <ItemImage></ItemImage>
+                        <Text
+                        color='white'
+                        marginLeft='5'
+                        fontSize='36px'
+                        > Alface </Text>
+                    </CardImage>
+                    <Text
+                    alignSelf='flex-start'
+                    marginLeft='8'
+                    marginY='5'
+                    > <b>Alface Crespa</b> </Text>
+
+                    <Text
+                    textAlign='justify'
+                    fontSize='14px'
+                    paddingX='8'                    
+                    > A alface crespa é uma hortaliça folhosa muito popular entre os brasileiros. 
+                    Costuma ser consumida crua, geralmente em saladas.</Text>
+
+                    <Flex 
+                    justifyContent='space-between'
+                    width='100%' 
+                    alignItems='center'                   
+                    >
+                        <Flex
+                        alignSelf='flex-start'
+                        marginTop='5'
+                        marginX='8'
+                        >
+                            <IconButton
+                            aria-label="Excluir" 
+                            icon={<DeleteIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme="red"
+                            size='sm'
+                            ></IconButton>
+
+                            <IconButton
+                            aria-label="Editar" 
+                            icon={<EditIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme='blackAlpha'
+                            marginLeft='2'
+                            size='sm'                        
+                            ></IconButton>
+                        </Flex>
+
+                        <Flex 
+                        marginRight='7' 
+                        marginTop='4'
+                        alignItems='center'
+                        >
+                            <Text 
+                            fontSize='12px'
+                            ><b>Média</b> R$</Text>
+                            <Text 
+                            fontSize='24px'
+                            marginLeft='1'
+                            color='#006B5C'
+                            ><b>1,99</b></Text>
+                            <Text 
+                            fontSize='12px'
+                            marginLeft='1'
+                            >unid</Text>
+
+                        </Flex>
+                    </Flex>
+                </Card1>
+
+                <Card1>
+                    <CardImage>
+                        <ItemImage></ItemImage>
+                        <Text
+                        color='white'
+                        marginLeft='5'
+                        fontSize='36px'
+                        > Alface </Text>
+                    </CardImage>
+                    <Text
+                    alignSelf='flex-start'
+                    marginLeft='8'
+                    marginY='5'
+                    > <b>Alface Crespa</b> </Text>
+
+                    <Text
+                    textAlign='justify'
+                    fontSize='14px'
+                    paddingX='8'                    
+                    > A alface crespa é uma hortaliça folhosa muito popular entre os brasileiros. 
+                    Costuma ser consumida crua, geralmente em saladas.</Text>
+
+                    <Flex 
+                    justifyContent='space-between'
+                    width='100%' 
+                    alignItems='center'                   
+                    >
+                        <Flex
+                        alignSelf='flex-start'
+                        marginTop='5'
+                        marginX='8'
+                        >
+                            <IconButton
+                            aria-label="Excluir" 
+                            icon={<DeleteIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme="red"
+                            size='sm'
+                            ></IconButton>
+
+                            <IconButton
+                            aria-label="Editar" 
+                            icon={<EditIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme='blackAlpha'
+                            marginLeft='2'
+                            size='sm'                        
+                            ></IconButton>
+                        </Flex>
+
+                        <Flex 
+                        marginRight='7' 
+                        marginTop='4'
+                        alignItems='center'
+                        >
+                            <Text 
+                            fontSize='12px'
+                            ><b>Média</b> R$</Text>
+                            <Text 
+                            fontSize='24px'
+                            marginLeft='1'
+                            color='#006B5C'
+                            ><b>1,99</b></Text>
+                            <Text 
+                            fontSize='12px'
+                            marginLeft='1'
+                            >unid</Text>
+
+                        </Flex>
+                    </Flex>
+                </Card1>
+
+                <Card1>
+                    <CardImage>
+                        <ItemImage></ItemImage>
+                        <Text
+                        color='white'
+                        marginLeft='5'
+                        fontSize='36px'
+                        > Alface </Text>
+                    </CardImage>
+                    <Text
+                    alignSelf='flex-start'
+                    marginLeft='8'
+                    marginY='5'
+                    > <b>Alface Crespa</b> </Text>
+
+                    <Text
+                    textAlign='justify'
+                    fontSize='14px'
+                    paddingX='8'                    
+                    > A alface crespa é uma hortaliça folhosa muito popular entre os brasileiros. 
+                    Costuma ser consumida crua, geralmente em saladas.</Text>
+
+                    <Flex 
+                    justifyContent='space-between'
+                    width='100%' 
+                    alignItems='center'                   
+                    >
+                        <Flex
+                        alignSelf='flex-start'
+                        marginTop='5'
+                        marginX='8'
+                        >
+                            <IconButton
+                            aria-label="Excluir" 
+                            icon={<DeleteIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme="red"
+                            size='sm'
+                            ></IconButton>
+
+                            <IconButton
+                            aria-label="Editar" 
+                            icon={<EditIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme='blackAlpha'
+                            marginLeft='2'
+                            size='sm'                        
+                            ></IconButton>
+                        </Flex>
+
+                        <Flex 
+                        marginRight='7' 
+                        marginTop='4'
+                        alignItems='center'
+                        >
+                            <Text 
+                            fontSize='12px'
+                            ><b>Média</b> R$</Text>
+                            <Text 
+                            fontSize='24px'
+                            marginLeft='1'
+                            color='#006B5C'
+                            ><b>1,99</b></Text>
+                            <Text 
+                            fontSize='12px'
+                            marginLeft='1'
+                            >unid</Text>
+
+                        </Flex>
+                    </Flex>
+                </Card1>                
+            </Flex>
+
+           <Separator></Separator>
+           
+            {/* Card Legumes */}
+            <Flex alignSelf='flex-start' marginLeft='195px'>
+            <Card2>
+                    <CardImage>
+                        <ItemImage2></ItemImage2>
+                        <Text
+                        color='white'
+                        marginLeft='5'
+                        fontSize='36px'
+                        > Beringela </Text>
+                    </CardImage>
+                    <Text
+                    alignSelf='flex-start'
+                    marginLeft='8'
+                    marginY='5'
+                    > <b>Beringela</b> </Text>
+
+                    <Text
+                    textAlign='justify'
+                    fontSize='14px'
+                    paddingX='8'                    
+                    > A berinjela ou beringela é o fruto da planta Solanum melongena, 
+                    uma solanaceae arbustiva, anual, originária da Índia</Text>
+
+                    <Flex 
+                    justifyContent='space-between'
+                    width='100%' 
+                    alignItems='center'                   
+                    >
+                        <Flex
+                        alignSelf='flex-start'
+                        marginTop='5'
+                        marginX='8'
+                        >
+                            <IconButton
+                            aria-label="Excluir" 
+                            icon={<DeleteIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme="red"
+                            size='sm'
+                            ></IconButton>
+
+                            <IconButton
+                            aria-label="Editar" 
+                            icon={<EditIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme='blackAlpha'
+                            marginLeft='2'
+                            size='sm'                        
+                            ></IconButton>
+                        </Flex>
+
+                        <Flex 
+                        marginRight='7' 
+                        marginTop='4'
+                        alignItems='center'
+                        >
+                            <Text 
+                            fontSize='12px'
+                            ><b>Média</b> R$</Text>
+                            <Text 
+                            fontSize='24px'
+                            marginLeft='1'
+                            color='#006B5C'
+                            ><b>13,99</b></Text>
+                            <Text 
+                            fontSize='12px'
+                            marginLeft='1'
+                            >unid</Text>
+                        </Flex>
+                    </Flex>
+                </Card2>                
+            </Flex>
+
+            <Separator></Separator>
+
+            {/* Card Frutas */}
+
+            <Flex>
+            <Card2>
+                    <CardImage>
+                        <ItemImage3></ItemImage3>
+                        <Text
+                        color='white'
+                        marginLeft='5'
+                        fontSize='36px'
+                        > Tomate </Text>
+                    </CardImage>
+                    <Text
+                    alignSelf='flex-start'
+                    marginLeft='8'
+                    marginY='5'
+                    > <b>Tomate</b> </Text>
+
+                    <Text
+                    textAlign='justify'
+                    fontSize='14px'
+                    paddingX='8'                    
+                    > O tomate é o fruto do tomateiro. Da sua família, fazem também parte as berinjelas,
+                     as pimentas e os pimentões, além de algumas...</Text>
+
+                    <Flex 
+                    justifyContent='space-between'
+                    width='100%' 
+                    alignItems='center'                   
+                    >
+                        <Flex
+                        alignSelf='flex-start'
+                        marginTop='5'
+                        marginX='8'
+                        >
+                            <IconButton
+                            aria-label="Excluir" 
+                            icon={<DeleteIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme="red"
+                            size='sm'
+                            ></IconButton>
+
+                            <IconButton
+                            aria-label="Editar" 
+                            icon={<EditIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme='blackAlpha'
+                            marginLeft='2'
+                            size='sm'                        
+                            ></IconButton>
+                        </Flex>
+
+                        <Flex 
+                        marginRight='7' 
+                        marginTop='4'
+                        alignItems='center'
+                        >
+                            <Text 
+                            fontSize='12px'
+                            ><b>Média</b> R$</Text>
+                            <Text 
+                            fontSize='24px'
+                            marginLeft='1'
+                            color='#006B5C'
+                            ><b>13,99</b></Text>
+                            <Text 
+                            fontSize='12px'
+                            marginLeft='1'
+                            >unid</Text>
+                        </Flex>
+                    </Flex>
+                </Card2> 
+            </Flex>
+
+            <Separator></Separator>
+            
 
             {/* Footer */}
             <Box marginY='5'>
