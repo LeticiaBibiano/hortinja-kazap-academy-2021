@@ -1,20 +1,21 @@
 import React from 'react'
 import { Flex, 
-         Spacer,
          Text,
          Image,
          Box,
-         Divider,
-         Stack,
          Button,
-         IconButton 
+         IconButton,
+         Select,
+         Input,
         } from "@chakra-ui/react"
 import Logo from '../../assets/logo.svg'
-import { ChevronDownIcon, DeleteIcon, EditIcon } from '@chakra-ui/icons'
+import Money from '../../assets/money.svg'
+import { DeleteIcon, EditIcon, CalendarIcon, AddIcon } from '@chakra-ui/icons'
 import { Card1, CardImage, ItemImage } from '../../components/Card1'
 import { Card2, ItemImage2 } from '../../components/Card2'
 import { Card3, ItemImage3 } from '../../components/Card3'
 import { Separator } from '../../components/Separator'
+import { CardInfo, MainCard } from '../../components/MainCard'
 
 export const Home = () => {
     return(
@@ -34,7 +35,7 @@ export const Home = () => {
             justifyContent='space-between'            
             >
                 <Image src={Logo} alt='Hortinja Logo'
-                paddingLeft= '250'
+                paddingLeft= '15%'
                 paddingY='2'                              
                 />
                 <Flex 
@@ -42,65 +43,110 @@ export const Home = () => {
                 justifyContent='space-between'
                 marginRight='250'                
                 >
-                <Button 
-                width='47%' 
-                rightIcon={<ChevronDownIcon/>}
-                onClick={ () => console.log('Mostrar categorias')}
-            
-                >Selecionar categoria</Button>
 
-                <Button width='47%'>Buscar hortaliça</Button>
+                <Select 
+                placeholder="Selecionar categoria"
+                variant="filled"
+                borderRadius='20px'
+                backgroundColor='#D9D2CF'
+                ></Select>
+
+                <Input 
+                borderRadius='20px'
+                backgroundColor='#D9D2CF'
+                placeholder='Buscar hortaliça'>
+                </Input>
+           
                 </Flex>
             </Flex>
 
-            {/* Container 1 */}
-            <Flex 
-            height='100%'
-            width='50%'           
-            bg='black'
-            > 
-            <Box>
-                <Flex                 
-                bg='#FFFFFF'
-                borderRadius='32px'
-                paddingY='4'
-                paddingLeft='6'
-                width='80'
-                
-                >
-                <Stack spacing='0'>
-                <Text fontSize='18px'>Registros</Text>                
-                <Text fontSize='14px' textAlign='justify'>Número de registros da Horta</Text>
-                </Stack>
-                </Flex>                
-            </Box>
+            {/* Main Card */}
 
-            <Divider></Divider>
+            <MainCard marginBottom='100px'></MainCard>
 
-            <Box>
-                <Flex                 
-                bg='#FFFFFF'
-                borderRadius='32px'
-                paddingY='4'
-                paddingLeft='6'
-                width='80'
+            <Flex
+            width='600px'
+            >
+            <CardInfo>
+                <Text
+                marginTop='20px'
+                marginLeft='20px'
+                ><b>Registros</b></Text>
+                <Text
+                marginLeft='20px'
+                >Número de registros da horta</Text>
+                <Flex
+                alignItems='center'
+                marginTop='35px'
+                marginX='110px'
                 >
-                <Stack spacing='-6'>
-                <Text fontSize='18px'>Valor total</Text>
-                <br></br>
-                <Text fontSize='14px'>Preço total da Horta</Text>
-                </Stack>
+                <CalendarIcon
+                boxSize={7} 
+                color='teal'
+                />
+                <Text 
+                fontSize='xl'
+                marginLeft='10px'
+                ><b>#029</b></Text>
                 </Flex>
-            </Box>
-            </Flex>
+            </CardInfo>
 
+            <CardInfo>
+            <Text
+                marginTop='20px'
+                marginLeft='20px'
+                ><b>Valor total</b></Text>
+                <Text
+                marginLeft='20px'
+                >Preço total da horta</Text>
+                <Flex
+                alignItems='center'
+                marginTop='30px'
+                marginX='100px'
+                >
+                <Image src={Money} alt='Money Logo'                             
+                />
+                <Text 
+                fontSize='xl'
+                marginLeft='10px'
+                ><b>#029</b></Text>
+                </Flex>
+            </CardInfo>
+            </Flex>
+    
+            <Separator></Separator>
+        
             {/* Buttons */}
-            <Flex>
-                <Button>Adicionar Hortaliças</Button>
-                <Button>Adicionar Categoria</Button>
+            <Flex
+            width='50%'
+            justifyContent='space-between'
+            marginTop='-7'
+            marginBottom='70px'
+            >
+                <Button
+                borderRadius='20px'
+                backgroundColor='#006B5C'
+                color='white'
+                width='48%'
+                leftIcon={<AddIcon/>}
+                >Adicionar Hortaliças</Button>
+                <Button
+                borderRadius='20px'
+                backgroundColor='#006B5C'
+                color='white'
+                width='48%'
+                leftIcon={<AddIcon/>}
+                >Adicionar Categoria</Button>
             </Flex>
 
-            <Button>Verduras</Button>
+            <Button
+            alignSelf='flex-start'
+            marginX='220px'
+            marginBottom='30px'
+            variant="ghost"
+            fontSize='30px'
+            rightIcon={<EditIcon/>}
+            ><b>Verduras</b></Button>
 
             {/* Card verduras */}
             <Flex>
@@ -322,6 +368,15 @@ export const Home = () => {
             </Flex>
 
            <Separator></Separator>
+
+           <Button
+            alignSelf='flex-start'
+            marginX='220px'
+            marginBottom='30px'
+            variant="ghost"
+            fontSize='30px'
+            rightIcon={<EditIcon/>}
+            ><b>Legumes</b></Button>
            
             {/* Card Legumes */}
             <Flex alignSelf='flex-start' marginLeft='195px'>
@@ -399,10 +454,19 @@ export const Home = () => {
 
             <Separator></Separator>
 
+            <Button
+            alignSelf='flex-start'
+            marginX='220px'
+            marginBottom='30px'
+            variant="ghost"
+            fontSize='30px'
+            rightIcon={<EditIcon/>}
+            ><b>Frutas</b></Button>
+
             {/* Card Frutas */}
 
             <Flex>
-            <Card2>
+            <Card3>
                     <CardImage>
                         <ItemImage3></ItemImage3>
                         <Text
@@ -471,12 +535,153 @@ export const Home = () => {
                             >unid</Text>
                         </Flex>
                     </Flex>
-                </Card2> 
+                </Card3> 
+
+                <Card3>
+                    <CardImage>
+                        <ItemImage3></ItemImage3>
+                        <Text
+                        color='white'
+                        marginLeft='5'
+                        fontSize='36px'
+                        > Tomate </Text>
+                    </CardImage>
+                    <Text
+                    alignSelf='flex-start'
+                    marginLeft='8'
+                    marginY='5'
+                    > <b>Tomate</b> </Text>
+
+                    <Text
+                    textAlign='justify'
+                    fontSize='14px'
+                    paddingX='8'                    
+                    > O tomate é o fruto do tomateiro. Da sua família, fazem também parte as berinjelas,
+                     as pimentas e os pimentões, além de algumas...</Text>
+
+                    <Flex 
+                    justifyContent='space-between'
+                    width='100%' 
+                    alignItems='center'                   
+                    >
+                        <Flex
+                        alignSelf='flex-start'
+                        marginTop='5'
+                        marginX='8'
+                        >
+                            <IconButton
+                            aria-label="Excluir" 
+                            icon={<DeleteIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme="red"
+                            size='sm'
+                            ></IconButton>
+
+                            <IconButton
+                            aria-label="Editar" 
+                            icon={<EditIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme='blackAlpha'
+                            marginLeft='2'
+                            size='sm'                        
+                            ></IconButton>
+                        </Flex>
+
+                        <Flex 
+                        marginRight='7' 
+                        marginTop='4'
+                        alignItems='center'
+                        >
+                            <Text 
+                            fontSize='12px'
+                            ><b>Média</b> R$</Text>
+                            <Text 
+                            fontSize='24px'
+                            marginLeft='1'
+                            color='#006B5C'
+                            ><b>13,99</b></Text>
+                            <Text 
+                            fontSize='12px'
+                            marginLeft='1'
+                            >unid</Text>
+                        </Flex>
+                    </Flex>
+                </Card3> 
+
+                <Card3>
+                    <CardImage>
+                        <ItemImage3></ItemImage3>
+                        <Text
+                        color='white'
+                        marginLeft='5'
+                        fontSize='36px'
+                        > Tomate </Text>
+                    </CardImage>
+                    <Text
+                    alignSelf='flex-start'
+                    marginLeft='8'
+                    marginY='5'
+                    > <b>Tomate</b> </Text>
+
+                    <Text
+                    textAlign='justify'
+                    fontSize='14px'
+                    paddingX='8'                    
+                    > O tomate é o fruto do tomateiro. Da sua família, fazem também parte as berinjelas,
+                     as pimentas e os pimentões, além de algumas...</Text>
+
+                    <Flex 
+                    justifyContent='space-between'
+                    width='100%' 
+                    alignItems='center'                   
+                    >
+                        <Flex
+                        alignSelf='flex-start'
+                        marginTop='5'
+                        marginX='8'
+                        >
+                            <IconButton
+                            aria-label="Excluir" 
+                            icon={<DeleteIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme="red"
+                            size='sm'
+                            ></IconButton>
+
+                            <IconButton
+                            aria-label="Editar" 
+                            icon={<EditIcon/>}
+                            alignSelf='flex-start'
+                            colorScheme='blackAlpha'
+                            marginLeft='2'
+                            size='sm'                        
+                            ></IconButton>
+                        </Flex>
+
+                        <Flex 
+                        marginRight='7' 
+                        marginTop='4'
+                        alignItems='center'
+                        >
+                            <Text 
+                            fontSize='12px'
+                            ><b>Média</b> R$</Text>
+                            <Text 
+                            fontSize='24px'
+                            marginLeft='1'
+                            color='#006B5C'
+                            ><b>13,99</b></Text>
+                            <Text 
+                            fontSize='12px'
+                            marginLeft='1'
+                            >unid</Text>
+                        </Flex>
+                    </Flex>
+                </Card3> 
             </Flex>
 
             <Separator></Separator>
             
-
             {/* Footer */}
             <Box marginY='5'>
                 <Text
